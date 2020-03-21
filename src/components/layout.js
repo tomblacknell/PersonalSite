@@ -1,9 +1,21 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
+
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      background: file(absolutePath: { regex: "/background.jpg/" }) {
+        childImageSharp {
+          fixed(width: 100, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }`);
+    
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 

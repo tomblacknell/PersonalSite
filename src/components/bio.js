@@ -16,7 +16,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -26,6 +26,8 @@ const Bio = () => {
           author
           social {
             twitter
+            github
+            linkedin
           }
         }
       }
@@ -46,7 +48,7 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
+          minWidth: 100,
           borderRadius: `100%`,
         }}
         imgStyle={{
@@ -54,12 +56,20 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        <strong>{author}</strong> lives in Brighton, UK and works as a Software Engineer - currently building web apps at American Express. Find him on
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Twitter
         </a>
+        {`, `}
+        <a href={`https://github.com/${social.github}`}>
+          GitHub
+        </a>
+        {` and `}
+        <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+          LinkedIn
+        </a>
+        .
       </p>
     </div>
   )
