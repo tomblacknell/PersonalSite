@@ -1,13 +1,6 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -30,13 +23,13 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
-        display: `flex`,
+        display: 'flex',
       }}
     >
       <Image
@@ -45,30 +38,32 @@ const Bio = () => {
         style={{
           marginBottom: 0,
           minWidth: 100,
-          borderRadius: `100%`,
+          borderRadius: '100%',
         }}
         imgStyle={{
-          borderRadius: `50%`,
+          borderRadius: '50%',
         }}
       />
       <p>
-        <strong>{author}</strong> lives in Brighton, UK and works as a Software Engineer building web apps at American Express. Find him on
-        {` `}
+        <strong>{author}</strong>
+        {' '}
+        Brighton based Software Engineer building web apps at American Express. Find me on
+        {' '}
         <a href={`https://twitter.com/${social.twitter}`}>
           Twitter
         </a>
-        {`, `}
+        {', '}
         <a href={`https://github.com/${social.github}`}>
           GitHub
         </a>
-        {` and `}
+        {' and '}
         <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
           LinkedIn
         </a>
         .
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

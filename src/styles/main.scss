@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './colours.scss';
+
+body {
+    background-color: $black01;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Montserrat;
+    color: $white;
+}
