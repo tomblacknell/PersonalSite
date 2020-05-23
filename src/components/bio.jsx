@@ -45,8 +45,6 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author}</strong>
-        {' '}
         Brighton based Software Engineer building web apps at American Express. Find me on
         {' '}
         <a href={`https://twitter.com/${social.twitter}`}>
