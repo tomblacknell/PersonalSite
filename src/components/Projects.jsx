@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 
-const Posts = () => {
-  const { allMarkdownRemark: { edges: posts } } = useStaticQuery(
+const Projects = () => {
+  const { allMarkdownRemark: { edges: projects } } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"  }}, sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}, sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
               excerpt
@@ -26,8 +26,8 @@ const Posts = () => {
 
   return (
     <div className="container">
-      <h4>Posts</h4>
-      {posts.map(({ node }) => (
+      <h4>Projects</h4>
+      {projects.map(({ node }) => (
         <article key={node.fields.slug}>
           <div>
             <h3>
@@ -50,4 +50,4 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default Projects;

@@ -30,6 +30,7 @@ const Bio = () => {
     <div
       style={{
         display: 'flex',
+        margin: 10,
       }}
     >
       <Image
@@ -39,6 +40,9 @@ const Bio = () => {
           marginBottom: 0,
           minWidth: 100,
           borderRadius: '100%',
+          position: 'relative',
+          zIndex: '-1',
+          marginRight: 10,
         }}
         imgStyle={{
           borderRadius: '50%',

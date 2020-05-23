@@ -10,23 +10,48 @@ body {
 
 header {
     background-color: $black1;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+main {
+    margin-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6, p, small {
     font-family: Raleway;
+    color: $black0;
+    margin: 0
+}
+
+h1 {
     color: $white;
+}
+
+h4 {
+    margin-bottom: 10px;
 }
 
 p {
     color: $black0;    
 }
 
-main {
-    margin: 0px;
+article {
+    margin-top: 20px;
 }
 
 .container {
     padding: 20px;
+    border: 2px solid $black1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 @include media(">=phone", "<tablet") {
