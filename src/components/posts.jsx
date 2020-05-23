@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import Thumbnail from './thumbnail';
 
 const Posts = () => {
   const { allMarkdownRemark: { edges: posts } } = useStaticQuery(
@@ -25,26 +26,14 @@ const Posts = () => {
   );
 
   return (
-    <div className="container">
-      <h4>Posts</h4>
+    <div className="row wrap justify-center">
       {posts.map(({ node }) => (
-        <article key={node.fields.slug}>
-          <div>
-            <h3>
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                {node.frontmatter.title || node.fields.slug}
-              </Link>
-            </h3>
-            <small>{node.frontmatter.date}</small>
-          </div>
-          <section>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </section>
-        </article>
+        <Thumbnail
+          slug={node.fields.slug}
+          title={node.frontmatter.title || node.fields.slug}
+          description={node.frontmatter.description || node.excerpt}
+          date={node.frontmatter.date}
+        />
       ))}
     </div>
   );

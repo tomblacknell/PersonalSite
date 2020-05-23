@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import './colours.scss';
 @import './breakpoints.scss';
+@import './util.scss';
+
 @import 'node_modules/include-media/dist/include-media';
 
 body {
@@ -20,7 +22,9 @@ header {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 55px;
+    border: 1px solid black;
+    padding: 10px;
 }
 
 h1, h2, h3, h4, h5, h6, p, small {
@@ -33,6 +37,10 @@ h1 {
     color: $white;
 }
 
+h3 {
+    margin-bottom: 5px;
+}
+
 h4 {
     margin-bottom: 10px;
 }
@@ -41,21 +49,30 @@ p {
     color: $black0;    
 }
 
-article {
-    margin-top: 20px;
-}
-
 .container {
     padding: 20px;
     border: 2px solid $black1;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
-@include media(">=phone", "<tablet") {
+.thumbnail {
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 20px;
+    -webkit-box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
+}
 
+@include media("screen", "<=phone") {
+    .thumbnail {
+        width: 100%;
+        height: 300px;
+    }
 }
 
 @include media(">=tablet", "<desktop") {
