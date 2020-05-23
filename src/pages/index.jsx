@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Bio from '../components/Bio';
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
-import Posts from '../components/Posts';
-import Projects from '../components/Projects';
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Posts from '../components/posts';
+import Projects from '../components/projects';
 
 import '../styles/main.scss';
 
