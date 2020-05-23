@@ -35,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.19.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -57,5 +58,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "fix": "eslint \"src/**/*.{js,jsx}\" --fix"
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
