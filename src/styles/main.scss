@@ -27,7 +27,6 @@ footer {
     padding-right: 10%;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 100%;
     color: $white;
 }
 
@@ -80,8 +79,12 @@ p {
     font-weight: 500;
 }
 
-.section-heading {
+.section-head {
     margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.section-subhead {
     margin-bottom: 15px;
 }
 

@@ -16,11 +16,12 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
-      <h3 className="section-heading">Posts</h3>
+      <h3 className="section-head">Posts</h3>
+      <p className="section-subhead">Look at all these interesting blog posts</p>
       <Posts />
-      <h3 className="section-heading">Projects</h3>
+      <h3 className="section-head">Projects</h3>
+      <p className="section-subhead">Read about and play with some of my side projects</p>
       <Projects />
-      <div style={{ marginTop: '700px' }} />
     </Layout>
   );
 };
