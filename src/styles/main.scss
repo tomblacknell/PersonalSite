@@ -32,8 +32,6 @@ footer {
 }
 
 main {
-    margin-top: 55px;
-    border: 1px solid black;
     padding: 10px;
 }
 
@@ -117,11 +115,11 @@ article {
 }
 
 .bio {
-    padding: 10px;
-    border: 2px solid $black1;
-    margin-bottom: 30px;
     >div {
         justify-content: center;
+    }
+    p, li, a {
+        color: $white;
     }
 }
 
@@ -134,6 +132,12 @@ article {
     position: relative;
     z-index: -1;
     margin-right: 10;
+}
+
+.hero {
+    margin-top: 55px;
+    height: 100vh;
+    color: $white;
 }
 
 @include media("screen", "<=phone") {
@@ -157,10 +161,18 @@ article {
         margin-left: 5%;
         margin-right: 5%;
     }
+    .hero > div {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 @include media("screen", ">=desktop") {
     main {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .hero > div {
         margin-left: 20%;
         margin-right: 20%;
     }

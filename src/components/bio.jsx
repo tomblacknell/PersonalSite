@@ -35,7 +35,7 @@ const Bio = () => {
           alt={author}
           className="avatar"
         />
-        <div className="col justify-flex-end">
+        <div className="col justify-center">
           <p>
             Brighton based full-stack engineer building web apps at American Express.
             Some more text and some more text and here is even a bit more.
