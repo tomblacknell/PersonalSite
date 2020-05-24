@@ -29,15 +29,16 @@ const Bio = () => {
   const { author } = data.site.siteMetadata;
   return (
     <div className="col bio">
-      <div className="row">
-        <Image
+      <div className="row" style={{ marginBottom: 30 }}>
+        <h1 style={{ marginTop: '20px', fontSize: '2.5rem' }}>Tom Blacknell</h1>
+        {/* <Image
           fixed={data.avatar.childImageSharp.fixed}
           alt={author}
           className="avatar"
-        />
+        /> */}
         <div className="col justify-center">
           <p>
-            Brighton based full-stack engineer building web apps at American Express.
+            Full-stack engineer building web apps at American Express.
           </p>
         </div>
       </div>
