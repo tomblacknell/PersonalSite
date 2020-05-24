@@ -8,6 +8,7 @@
 body {
     background-color: $white;
     margin: 0;
+    font-family: Raleway;
 }
 
 header {
@@ -37,7 +38,6 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6, p, small, li {
-    font-family: Raleway;
     color: $black0;
     margin: 0
 }
@@ -46,8 +46,12 @@ h1 {
     color: $white;
 }
 
-p {
-    color: $black0;    
+article {
+    margin-top: 50px;
+}
+
+.content {
+    margin-top: 10px;
 }
 
 .container {
@@ -80,12 +84,12 @@ p {
 }
 
 .section-head {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
 .section-subhead {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .icon-btn :hover {
@@ -104,11 +108,18 @@ p {
     -webkit-box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 6px -3px rgba(0,0,0,0.75);
+    >a {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-decoration: none;
+    }
 }
 
 .bio {
     padding: 10px;
     border: 2px solid $black1;
+    margin-bottom: 30px;
     >div {
         justify-content: center;
     }

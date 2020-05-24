@@ -5,7 +5,7 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const ProjectTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h3 style={{ fontWeight: 300 }}>Blog Post</h3>
+      <h3 style={{ fontWeight: 300 }}>Project</h3>
       <article>
         <div>
           <h2
@@ -78,10 +78,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   );
 };
 
-export default BlogPostTemplate;
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
         title
