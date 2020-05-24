@@ -9,6 +9,7 @@ module.exports = {
             "rules": {
                 "react/prop-types": "off",
                 "react/no-danger": "off",
+                "react/jsx-fragments": "off",
             }
         }
     ]
