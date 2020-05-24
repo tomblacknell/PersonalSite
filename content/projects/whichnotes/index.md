@@ -1,5 +1,5 @@
 ---
-title: White Notes?
+title: Which Notes?
 description: "Learn chords using this thing"
 ---
 
