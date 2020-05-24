@@ -1,9 +1,11 @@
 /* eslint-disable no-undef */
 const scrollTo = (id) => {
   const element = document.getElementById(id);
-  const headerOffset = 80;
-  const elementPosition = element.getBoundingClientRect().top;
-  const offsetPosition = elementPosition - headerOffset;
+  const offset = 30;
+  const bodyRect = document.body.getBoundingClientRect().top;
+  const elementRect = element.getBoundingClientRect().top;
+  const elementPosition = elementRect - bodyRect;
+  const offsetPosition = elementPosition - offset;
 
   window.scrollTo({
     top: offsetPosition,

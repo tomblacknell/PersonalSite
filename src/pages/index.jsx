@@ -22,12 +22,12 @@ const Index = ({ data, location }) => {
       </Hero>
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" />
-        <h3 id="posts" className="section-head">Posts</h3>
-        <p className="section-subhead">Look at all these interesting blog posts</p>
-        <Posts />
         <h3 id="projects" className="section-head">Projects</h3>
         <p className="section-subhead">Read about and play with some of my side projects</p>
         <Projects />
+        <h3 id="posts" className="section-head">Blog</h3>
+        <p className="section-subhead">Look at all these interesting blog posts</p>
+        <Posts />
       </Layout>
     </Fragment>
   );
