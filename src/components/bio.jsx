@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import Nav from './nav';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -25,40 +26,23 @@ const Bio = () => {
     }
   `);
 
-  const { author, social } = data.site.siteMetadata;
+  const { author } = data.site.siteMetadata;
   return (
-    <div className="row">
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginBottom: 0,
-          minWidth: 100,
-          borderRadius: '100%',
-          position: 'relative',
-          zIndex: '-1',
-          marginRight: 10,
-        }}
-        imgStyle={{
-          borderRadius: '50%',
-        }}
-      />
-      <p>
-        Brighton based Software Engineer building web apps at American Express. Find me on
-        {' '}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Twitter
-        </a>
-        {', '}
-        <a href={`https://github.com/${social.github}`}>
-          GitHub
-        </a>
-        {' and '}
-        <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
-          LinkedIn
-        </a>
-        .
-      </p>
+    <div className="col bio">
+      <div className="row">
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author}
+          className="avatar"
+        />
+        <div className="col justify-flex-end">
+          <p>
+            Brighton based full-stack engineer building web apps at American Express.
+            Some more text and some more text and here is even a bit more.
+          </p>
+        </div>
+      </div>
+      <Nav />
     </div>
   );
 };

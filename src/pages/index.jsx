@@ -16,9 +16,9 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
-      <h4>Posts</h4>
+      <h3 className="section-heading">Posts</h3>
       <Posts />
-      <h4>Projects</h4>
+      <h3 className="section-heading">Projects</h3>
       <Projects />
       <div style={{ marginTop: '700px' }} />
     </Layout>

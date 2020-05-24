@@ -1,3 +1,5 @@
+@import './colours.scss';
+
 .row {
   display: flex;
   flex-direction: row;
@@ -5,7 +7,7 @@
 
 .col {
   display: flex;
-  flex-direction: col;
+  flex-direction: column;
 }
 
 .wrap {
@@ -18,4 +20,8 @@
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
 }
