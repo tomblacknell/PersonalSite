@@ -38,7 +38,6 @@ const Bio = () => {
         <div className="col justify-center">
           <p>
             Brighton based full-stack engineer building web apps at American Express.
-            Some more text and some more text and here is even a bit more.
           </p>
         </div>
       </div>

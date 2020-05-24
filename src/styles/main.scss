@@ -118,8 +118,24 @@ article {
     >div {
         justify-content: center;
     }
-    p, li, a {
+    p {
         color: $white;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        background-color: $white;
+        margin-bottom: 15px;
+        padding: 5px; 
+        padding-left: 10px; 
+        border-bottom: 2px solid $black1;
+        border-right: 2px solid $black3;
+    }
+    a {
+        text-decoration: none;
+        color: $black0;
     }
 }
 
@@ -157,6 +173,9 @@ article {
     }
     .hero {
         height: calc(100vh - 50px);
+    }
+    header {
+        padding-left: 20px;
     }
 }
 
