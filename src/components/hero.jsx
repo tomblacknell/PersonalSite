@@ -27,7 +27,7 @@ const Hero = ({ children }) => {
         {children}
       </div>
       <div className="row justify-center">
-        <FontAwesomeIcon className="icon-hero" size="2x" icon={faAngleDoubleDown} />
+        <FontAwesomeIcon className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
       </div>
     </BackgroundImage>
   );
