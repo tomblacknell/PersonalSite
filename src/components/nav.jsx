@@ -3,7 +3,16 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import scrollTo from '../utils/scrollTo';
+
+const navItem = (label) => (
+  <li className="nav-item">
+    <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
+    {label}
+  </li>
+);
 
 const Nav = () => {
   const data = useStaticQuery(graphql`
@@ -24,11 +33,21 @@ const Nav = () => {
   return (
     <div>
       <ul>
-        <a onClick={() => scrollTo('projects')}><li className="nav-item">Projects</li></a>
-        <a onClick={() => scrollTo('posts')}><li className="nav-item">Blog</li></a>
-        <a href={`https://github.com/${social.github}`}><li className="nav-item">GitHub</li></a>
-        <a href={`https://twitter.com/${social.twitter}`}><li className="nav-item">Twitter</li></a>
-        <a href={`https://www.linkedin.com/in/${social.linkedin}`}><li className="nav-item">LinkedIn</li></a>
+        <a onClick={() => scrollTo('projects')}>
+          {navItem('Projects')}
+        </a>
+        <a onClick={() => scrollTo('posts')}>
+          {navItem('Blog')}
+        </a>
+        <a href={`https://github.com/${social.github}`}>
+          {navItem('GitHub')}
+        </a>
+        <a href={`https://twitter.com/${social.twitter}`}>
+          {navItem('Twitter')}
+        </a>
+        <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+          {navItem('LinkedIn')}
+        </a>
       </ul>
     </div>
   );

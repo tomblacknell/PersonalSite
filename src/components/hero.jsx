@@ -1,6 +1,8 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = ({ children }) => {
   const { hero4K } = useStaticQuery(graphql`
@@ -23,6 +25,9 @@ const Hero = ({ children }) => {
     >
       <div>
         {children}
+      </div>
+      <div className="row justify-center">
+        <FontAwesomeIcon className="icon-hero" size="2x" icon={faAngleDoubleDown} />
       </div>
     </BackgroundImage>
   );
