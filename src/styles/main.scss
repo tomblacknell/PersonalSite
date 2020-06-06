@@ -56,10 +56,6 @@ article {
     margin-top: 50px;
 }
 
-.content {
-    margin-top: 10px;
-}
-
 .container {
     padding: 20px;
 }
@@ -120,7 +116,7 @@ article {
     padding: 10px;
     width: 200px;
     height: 200px;
-    border-radius: 9px;
+    border: 1px solid #333;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -151,7 +147,7 @@ article {
         margin: 0;
     }
     li {
-        min-width: 100px;
+        min-width: 140px;
         list-style: none;
         background-color: $white;
         padding: 5px; 
@@ -185,12 +181,18 @@ article {
     color: $white;
     &::before {
         opacity: 0.8 !important;
+        box-shadow: inset 0px 0px 150px black;
     }
 }
 
 .heading {
     text-shadow: 1px 1px #333;
     font-size: 2.5rem;
+}
+
+.content {
+    border: 2px solid #333;
+    padding: 10px;
 }
 
 @include media("screen", "<=phone") {

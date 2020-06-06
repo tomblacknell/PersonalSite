@@ -26,7 +26,7 @@ const Projects = () => {
   );
 
   return (
-    <div className="row wrap justify-center">
+    <div className="row wrap justify-around">
       {projects.map(({ node }) => (
         <Thumbnail
           slug={node.fields.slug}
