@@ -23,8 +23,6 @@ const Hero = ({ children }) => {
         Tag="section"
         className="hero"
         fluid={hero4K.childImageSharp.fluid}
-        // style={{ opacity: 0.5 }}
-        // opacity={0.5}
       >
         <div>
           {children}
