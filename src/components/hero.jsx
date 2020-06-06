@@ -9,7 +9,7 @@ const Hero = ({ children }) => {
   query HeroQuery {
     hero4K: file(absolutePath: { regex: "/hero-4k.jpg/" }) {
       childImageSharp {
-        fluid(quality: 100 maxWidth: 5000) {
+        fluid(quality: 100 maxWidth: 5300) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -18,18 +18,22 @@ const Hero = ({ children }) => {
 `);
 
   return (
-    <BackgroundImage
-      Tag="section"
-      className="hero"
-      fluid={hero4K.childImageSharp.fluid}
-    >
-      <div>
-        {children}
-      </div>
-      <div className="row justify-center">
-        <FontAwesomeIcon className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
-      </div>
-    </BackgroundImage>
+    <div style={{ backgroundColor: 'black' }}>
+      <BackgroundImage
+        Tag="section"
+        className="hero"
+        fluid={hero4K.childImageSharp.fluid}
+        // style={{ opacity: 0.5 }}
+        // opacity={0.5}
+      >
+        <div>
+          {children}
+        </div>
+        <div className="row justify-center">
+          <FontAwesomeIcon className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
+        </div>
+      </BackgroundImage>
+    </div>
   );
 };
 

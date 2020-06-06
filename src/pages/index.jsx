@@ -16,9 +16,7 @@ const Index = ({ data, location }) => {
   return (
     <Fragment>
       <Hero>
-        <div className="container">
-          <Bio />
-        </div>
+        <Bio />
       </Hero>
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" />

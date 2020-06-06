@@ -20,9 +20,13 @@ header {
     padding-bottom: 10px;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: -50px;
+    transition: top 0.3s;
     >h1 {
         font-weight: 300;
+    }
+    &.show{
+        top: 0;
     }
 }
 
@@ -79,10 +83,14 @@ article {
     }
 }
 
+.nav {
+    margin-left: 40px;
+}
+
 .nav-item {
     padding-top: 10px;
     font-size: 1.17em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .section-head {
@@ -129,25 +137,31 @@ article {
 }
 
 .bio {
-    >div {
-        justify-content: space-between;
-        align-items: flex-end;
-    }
+    background-color: rgba(1,1,1,0.5);
+    padding: 30px;
+    margin-top: 75px;
+    border: 3px solid #fff;
     p {
+        text-shadow: 1px 1px #333;
+        margin-top: 15px;
         color: $white;
-        text-align: right;
     }
     ul {
         padding: 0;
+        margin: 0;
     }
     li {
+        min-width: 100px;
         list-style: none;
         background-color: $white;
-        margin-bottom: 15px;
         padding: 5px; 
         padding-left: 10px; 
+        margin-bottom: 15px;
         border-bottom: 2px solid $black1;
         border-right: 2px solid $black3;
+    }
+    ul > a:nth-child(5) > li {
+        margin-bottom: 0;
     }
     a {
         text-decoration: none;
@@ -167,23 +181,34 @@ article {
 }
 
 .hero {
-    margin-top: 55px;
-    height: calc(100vh - 50px);
+    height: 100vh;
     color: $white;
+    &::before {
+        opacity: 0.8 !important;
+    }
 }
 
 .heading {
-    text-shadow: 2px 2px #333;
-    margin-top: 20px;
+    text-shadow: 1px 1px #333;
     font-size: 2.5rem;
 }
 
 @include media("screen", "<=phone") {
+    .nav {
+        margin-left: 0;
+        margin-top: 30px;
+    }
     .thumbnail {
         width: 100%;
     }
     .cookies > div {
         margin: 0;
+    }
+    .bio {
+        margin-top: 0;
+        flex-wrap: wrap;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .bio > div {
         flex-wrap: wrap;

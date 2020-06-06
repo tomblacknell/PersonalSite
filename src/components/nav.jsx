@@ -31,7 +31,7 @@ const Nav = () => {
   `);
   const { social } = data.site.siteMetadata;
   return (
-    <div>
+    <div className="nav">
       <ul>
         <a onClick={() => scrollTo('projects')}>
           {navItem('Projects')}
