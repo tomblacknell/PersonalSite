@@ -42,9 +42,9 @@ const Nav = () => {
         <a href={`https://github.com/${social.github}`}>
           {navItem('GitHub')}
         </a>
-        <a href={`https://twitter.com/${social.twitter}`}>
+        {/* <a href={`https://twitter.com/${social.twitter}`}>
           {navItem('Twitter')}
-        </a>
+        </a> */}
         <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
           {navItem('LinkedIn')}
         </a>

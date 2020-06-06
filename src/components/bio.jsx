@@ -14,9 +14,6 @@ const Bio = () => (
           <p>
             Some other stuff right here, for example. Hope you enjoy.
           </p>
-          <p>
-            Maybe a final sentance just here, more words, and so on.
-          </p>
         </div>
       </div>
       <Nav />
