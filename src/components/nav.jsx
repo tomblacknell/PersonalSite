@@ -39,13 +39,13 @@ const Nav = () => {
         <a onClick={() => scrollTo('posts')}>
           {navItem('Blog')}
         </a>
-        <a href={`https://github.com/${social.github}`}>
+        <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github}`}>
           {navItem('GitHub')}
         </a>
         {/* <a href={`https://twitter.com/${social.twitter}`}>
           {navItem('Twitter')}
         </a> */}
-        <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+        <a target="_blank" rel="noreferrer" href={`https://www.linkedin.com/in/${social.linkedin}`}>
           {navItem('LinkedIn')}
         </a>
       </ul>

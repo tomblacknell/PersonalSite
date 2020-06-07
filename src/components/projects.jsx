@@ -29,14 +29,12 @@ const Projects = () => {
   );
 
   return (
-    <div className="content">
-
+    <div className="content" style={{ borderBottomStyle: 'dashed' }}>
       <div className="row" style={{ alignItems: 'center', marginBottom: 10 }}>
         <FontAwesomeIcon className="icon-nav" icon={faProjectDiagram} />
         <h3 id="projects">Projects</h3>
       </div>
       <hr />
-
       <p className="section-subhead">Read about and play with some of my side projects</p>
       <div className="row wrap justify-around">
         {projects.map(({ node }) => (

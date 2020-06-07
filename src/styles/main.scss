@@ -115,6 +115,7 @@ article {
 
 a {
     color: #00b7ff;
+    text-decoration: none;
 }
 
 .thumbnail {
@@ -167,11 +168,11 @@ a {
     ul > a:nth-child(5) > li {
         margin-bottom: 0;
     }
-    a {
-        text-decoration: none;
-        color: $black0;
+    .text-block {
+        margin-right: 165px;
     }
 }
+
 
 .avatar {
     display: flex;
@@ -202,7 +203,7 @@ a {
     border: 3px solid #333;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 15px;
+    padding-top: 25px;
     padding-bottom: 10px;
 }
 
@@ -226,6 +227,9 @@ a {
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 10px;
+        .text-block {
+            margin-right: 0px;
+        }
     }
     .bio > div {
         flex-wrap: wrap;
@@ -243,7 +247,15 @@ a {
     }
     .content {
         padding: 10px;
+        padding-top: 25px;
     }
+}
+
+.cool {
+    color: white;
+    background-color: black;
+    height: 50px;
+    padding: 25px;
 }
 
 @include media(">=tablet", "<desktop") {
@@ -254,6 +266,11 @@ a {
     .hero > div {
         margin-left: 5%;
         margin-right: 5%;
+    }
+    .bio {
+        .text-block {
+            margin-right: 100px;
+        }
     }
 }
 

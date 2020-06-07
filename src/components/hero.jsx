@@ -29,6 +29,28 @@ const Hero = ({ children }) => {
         </div>
         <div className="row justify-center">
           <FontAwesomeIcon className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
+          <small
+            style={{
+              color: 'white',
+              bottom: 0,
+              position: 'absolute',
+              marginBottom: 10,
+              right: 10,
+            }}
+          >
+            <a
+              href="https://www.nasa.gov/mission_pages/hubble/multimedia/index.html"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: 'rgb(135, 135, 135)',
+                textDecoration: 'underline',
+                cursor: 'pointer',
+              }}
+            >
+              Source
+            </a>
+          </small>
         </div>
       </BackgroundImage>
     </div>
