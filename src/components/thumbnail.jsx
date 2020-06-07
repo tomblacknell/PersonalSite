@@ -15,13 +15,11 @@ const Thumbnail = ({
         </h3>
         <small>{date}</small>
       </div>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
-      </section>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
     </Link>
   </div>
 );
