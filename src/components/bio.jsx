@@ -8,13 +8,13 @@ const Bio = () => (
         <h1 className="heading">Tom Blacknell</h1>
         <div>
           <p>
-            Building web apps at American Express
+            Full-stack web engineer @ American Express
           </p>
           <p>
-            Can also be found
-            {' '}
-            <a target="_blank" rel="noreferrer" href="https://www.strava.com/athletes/17739214">running </a>
-            and playing keyboard.
+            Also found running
+            <span aria-label="man running" role="img"> 🏃‍♂️ </span>
+            and playing keyboard
+            <span aria-label="piano" role="img"> 🎹</span>
           </p>
         </div>
       </div>
