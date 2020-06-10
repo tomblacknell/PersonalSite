@@ -24,7 +24,7 @@ const Hero = ({ children }) => {
         className="hero"
         fluid={hero4K.childImageSharp.fluid}
       >
-        <div>
+        <div style={{ height: '100%' }}>
           {children}
         </div>
         <div className="row justify-center">
