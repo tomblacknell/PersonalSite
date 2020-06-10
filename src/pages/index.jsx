@@ -7,7 +7,6 @@ import SEO from '../components/seo';
 import Posts from '../components/posts';
 import Projects from '../components/projects';
 import Hero from '../components/hero';
-import Cool from '../components/cool';
 
 import '../styles/main.scss';
 
@@ -22,7 +21,6 @@ const Index = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" />
         <Projects />
-        <Cool />
         <Posts />
       </Layout>
     </Fragment>

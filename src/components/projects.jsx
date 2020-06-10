@@ -29,12 +29,19 @@ const Projects = () => {
   );
 
   return (
-    <div className="content" style={{ borderBottomStyle: 'dashed' }}>
-      <div className="row" style={{ alignItems: 'center', marginBottom: 10 }}>
+    <div className="content" style={{ borderBottomStyle: 'none' }}>
+      <div
+        className="row"
+        style={{
+          alignItems: 'center', marginBottom: 10, display: 'flex', justifyContent: 'space-between',
+        }}
+      >
+        <h3 id="projects" style={{ fontWeight: 200, fontSize: '1.5rem' }}>
+          Projects
+        </h3>
         <FontAwesomeIcon className="icon-nav" icon={faProjectDiagram} />
-        <h3 id="projects">Projects</h3>
       </div>
-      <hr />
+      <div className="hr" />
       <p className="section-subhead">Read about and play with some of my side projects</p>
       <div className="row wrap justify-around">
         {projects.map(({ node }) => (

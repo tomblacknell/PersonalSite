@@ -29,12 +29,19 @@ const Posts = () => {
   );
 
   return (
-    <div className="content" style={{ borderTopStyle: 'dashed' }}>
-      <div className="row" style={{ alignItems: 'center', marginBottom: 10 }}>
+    <div className="content" style={{ borderTopStyle: 'none' }}>
+      <div
+        className="row"
+        style={{
+          alignItems: 'center', marginBottom: 10, display: 'flex', justifyContent: 'space-between',
+        }}
+      >
+        <h3 id="projects" style={{ fontWeight: 200, fontSize: '1.5rem' }}>
+          Blog
+        </h3>
         <FontAwesomeIcon className="icon-nav" icon={faBook} />
-        <h3 id="posts">Blog</h3>
       </div>
-      <hr />
+      <div className="hr" />
       <p className="section-subhead">Look at all these interesting blog posts</p>
       <div className="row wrap justify-around">
         {posts.map(({ node }) => (

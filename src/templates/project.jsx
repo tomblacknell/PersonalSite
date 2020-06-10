@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
+import AboutTheAuthor from '../components/aboutTheAuthor';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -39,9 +39,7 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
           style={{ marginBottom: 40 }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div>
-          <Bio />
-        </div>
+        <AboutTheAuthor />
       </article>
 
       <nav>
