@@ -207,14 +207,6 @@ ul {
     font-size: 2.5rem;
 }
 
-.content {
-    border: 2px solid #333;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 10px;
-}
-
 .aboutTheAuthor {
     border: 2px solid #333;
     padding: 10px;
@@ -244,9 +236,6 @@ ul {
     .nav {
         margin-left: 0;
         margin-top: 30px;
-    }
-    .thumbnail {
-        width: 100%;
     }
     .cookies > div {
         margin: 0;
@@ -296,10 +285,6 @@ ul {
 }
 
 @include media("screen", ">=desktop") {
-    main {
-        margin-left: 30%;
-        margin-right: 30%;
-    }
     .hero > div {
         margin-left: 20%;
         margin-right: 20%;

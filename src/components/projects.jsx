@@ -29,14 +29,14 @@ const Projects = () => {
   );
 
   return (
-    <div className="content" style={{ borderBottomStyle: 'none' }}>
+    <div>
       <div
         className="row"
         style={{
           alignItems: 'center', marginBottom: 10, display: 'flex', justifyContent: 'space-between',
         }}
       >
-        <h3 id="projects" style={{ fontWeight: 200, fontSize: '1.5rem' }}>
+        <h3 id="projects" style={{ fontWeight: 300, fontSize: '1.5rem' }}>
           Projects
         </h3>
         <FontAwesomeIcon className="icon-nav" icon={faProjectDiagram} />
