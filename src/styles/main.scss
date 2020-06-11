@@ -199,6 +199,7 @@ ul {
     &::before {
         opacity: 0.8 !important;
         box-shadow: inset 0px 0px 150px black;
+        background-attachment: fixed;
     }
 }
 
