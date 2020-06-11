@@ -65,6 +65,7 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -86,10 +87,6 @@ article {
         width: 100%;
     }
 }
-
-// .nav {
-//     margin-left: 40px;
-// }
 
 .nav-item {
     padding-top: 10px;
@@ -156,6 +153,8 @@ ul {
     justify-content: space-around;
     background-color: rgba(1,1,1,0.7);
     padding: 30px;
+    min-height: 250px;
+    max-width: 750px;
     margin-bottom: 75px;
     border: 3px solid #fff;
     p {
@@ -290,19 +289,6 @@ ul {
 }
 
 @include media(">=tablet", "<desktop") {
-    // main {
-    //     margin-left: 5%;
-    //     margin-right: 5%;
-    // }
-    // .hero > div {
-    //     margin-left: 5%;
-    //     margin-right: 5%;
-    // }
-    // .bio {
-    //     .text-block {
-    //         margin-right: 100px;
-    //     }
-    // }
     .hero > div {
         margin-left: 20%;
         margin-right: 20%;
