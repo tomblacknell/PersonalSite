@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import useDocumentScroll from '../utils/useDocumentScroll';
@@ -18,7 +20,7 @@ const Header = ({ title }) => {
   });
 
   return (
-    <header className={`${shouldShow && 'show'}`}>
+    <header className={`${(shouldShow || location.pathname !== '/') && 'show'}`}>
       <h1
         style={{
           marginTop: 0,

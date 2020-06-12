@@ -29,7 +29,7 @@ const Posts = () => {
   );
 
   return (
-    <div>
+    <div style={{ marginTop: '40px' }}>
       <div
         className="row"
         style={{
