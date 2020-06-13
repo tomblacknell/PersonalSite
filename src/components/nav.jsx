@@ -42,9 +42,6 @@ const Nav = () => {
         <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github}`}>
           {navItem('GitHub')}
         </a>
-        {/* <a href={`https://twitter.com/${social.twitter}`}>
-          {navItem('Twitter')}
-        </a> */}
         <a target="_blank" rel="noreferrer" href={`https://www.linkedin.com/in/${social.linkedin}`}>
           {navItem('LinkedIn')}
         </a>

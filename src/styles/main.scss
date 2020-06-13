@@ -90,10 +90,28 @@ article {
     }
 }
 
+.line {
+    border: 2px solid white;
+    margin-top: 25px;
+    width: 50%;
+}
+
+.nav {
+    width: 50%;
+}
+
 .nav-item {
     padding-top: 10px;
     font-size: 1.17em;
-    font-weight: 600;
+    font-weight: 300;
+    min-width: 140px;
+    list-style: none;
+    background-color: $black0;
+    padding: 5px; 
+    padding-left: 0; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid $white;
+    color: $white;
 }
 
 .section-subhead {
@@ -158,27 +176,20 @@ ul {
     max-width: 750px;
     margin-bottom: 75px;
     border: 3px solid #fff;
+    -webkit-box-shadow: 0px 0px 35px -20px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 35px -20px rgba(255,255,255,1);
+    box-shadow: 0px 0px 35px -20px rgba(255,255,255,1);
     p {
         text-shadow: 1px 1px #333;
         margin-top: 15px;
         color: $white;
-    }
-
-    li {
-        min-width: 140px;
-        list-style: none;
-        background-color: $white;
-        padding: 5px; 
-        padding-left: 10px; 
-        margin-bottom: 15px;
-        border-bottom: 2px solid $black1;
-        border-right: 2px solid $black3;
     }
     ul > a:nth-child(5) > li {
         margin-bottom: 0;
     }
     .text-block {
         margin-right: 40px;
+        margin-left: 20px;
     }
 }
 
@@ -248,19 +259,16 @@ ul {
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 10px;
-        .text-block {
-            margin-right: 0px;
-        }
     }
     .bio > div {
         flex-wrap: wrap;
         justify-content: center;
         > div > p {
-            text-align: center;
+            // text-align: center;
             padding-top: 10px;
         }
         h1 {
-            text-align: center;
+            // text-align: center;
         }
     }
     header {
