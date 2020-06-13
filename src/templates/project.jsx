@@ -11,7 +11,7 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} fixHeader>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

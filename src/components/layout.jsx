@@ -4,14 +4,14 @@ import Footer from './footer';
 import Cookies from './cookies';
 import '../styles/main.scss';
 
-const Layout = ({ title, children }) => (
+const Layout = ({ title, children, fixHeader }) => (
   <div
     style={{
       marginLeft: 'auto',
       marginRight: 'auto',
     }}
   >
-    <Header title={title} />
+    <Header title={title} fixHeader={fixHeader} />
     <main className="container">{children}</main>
     <Footer />
     <Cookies />

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import useDocumentScroll from '../utils/useDocumentScroll';
 
-const Header = ({ title }) => {
+const Header = ({ title, fixHeader }) => {
   const [shouldShow, setShouldShow] = useState(false);
 
   const minScroll = 80;
@@ -20,7 +20,7 @@ const Header = ({ title }) => {
   });
 
   return (
-    <header className={`${(shouldShow) && 'show'}`}>
+    <header className={`${(shouldShow || fixHeader) && 'show'}`}>
       <h1
         style={{
           marginTop: 0,
