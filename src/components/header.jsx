@@ -20,7 +20,7 @@ const Header = ({ title }) => {
   });
 
   return (
-    <header className={`${(shouldShow || location.pathname !== '/') && 'show'}`}>
+    <header className={`${(shouldShow || window.location.pathname !== '/') && 'show'}`}>
       <h1
         style={{
           marginTop: 0,

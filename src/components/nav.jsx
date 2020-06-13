@@ -36,9 +36,9 @@ const Nav = () => {
         <a onClick={() => scrollTo('projects')}>
           {navItem('Projects')}
         </a>
-        <a onClick={() => scrollTo('posts')}>
+        {/* <a onClick={() => scrollTo('posts')}>
           {navItem('Blog')}
-        </a>
+        </a> */}
         <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github}`}>
           {navItem('GitHub')}
         </a>

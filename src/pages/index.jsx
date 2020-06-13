@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Posts from '../components/posts';
+// import Posts from '../components/posts';
 import Projects from '../components/projects';
 import Hero from '../components/hero';
 
@@ -21,7 +21,7 @@ const Index = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" />
         <Projects />
-        <Posts />
+        {/* <Posts /> */}
       </Layout>
     </Fragment>
   );
