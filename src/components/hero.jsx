@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
+import scrollTo from '../utils/scrollTo';
+
 const Hero = ({ children }) => {
   const { hero4K } = useStaticQuery(graphql`
   query HeroQuery {
@@ -28,7 +30,7 @@ const Hero = ({ children }) => {
           {children}
         </div>
         <div className="row justify-center">
-          <FontAwesomeIcon className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
+          <FontAwesomeIcon onClick={() => scrollTo('projects')} className="icon-hero bounce" size="2x" icon={faAngleDoubleDown} />
           <small
             style={{
               color: 'white',
