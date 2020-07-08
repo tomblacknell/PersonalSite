@@ -13,9 +13,9 @@ const Bio = () => (
             <a rel="noreferrer" target="_blank" href="https://www.americanexpress.com/en-gb/referral"> American Express.</a>
           </p>
           <p>
-            <span aria-label="man using laptop" role="img"> 👨‍💻</span>
-            <span aria-label="man running" role="img"> 🏃‍♂️ </span>
-            <span aria-label="piano" role="img"> 🎹</span>
+            <span className="large-emoji" aria-label="man using laptop" role="img"> 👨‍💻</span>
+            <span className="large-emoji" aria-label="man running" role="img"> 🏃‍♂️ </span>
+            <span className="large-emoji" aria-label="piano" role="img"> 🎹</span>
           </p>
         </div>
       </div>
