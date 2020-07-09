@@ -1,8 +1,15 @@
 import React from 'react';
+import '../styles/main.scss';
+
+// prevents a Font Awesome icon server-side rendering bug
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; /* eslint-disable import/first */
+
 import Header from './header';
 import Footer from './footer';
 import Cookies from './cookies';
-import '../styles/main.scss';
 
 const Layout = ({ title, children, fixHeader }) => (
   <div
