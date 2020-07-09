@@ -14,12 +14,12 @@ const Thumbnail = ({
           {title}
         </h3>
         <small>{date}</small>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
       </div>
-      <p
-        dangerouslySetInnerHTML={{
-          __html: description,
-        }}
-      />
     </Link>
   </div>
 );
