@@ -6,7 +6,7 @@ const Bio = () => (
     <div className="row bio justify-center">
       <div className="col text-block">
         <h1 className="heading">Tom Blacknell</h1>
-        <div className="line" />
+        <div className="line" style={{ width: '50%' }} />
         <div>
           <p>
             Web Engineer at
@@ -19,9 +19,7 @@ const Bio = () => (
           </p>
         </div>
       </div>
-      <div style={{ width: '100%', marginLeft: 20 }}>
-        <Nav />
-      </div>
+      <Nav />
     </div>
   </div>
 );

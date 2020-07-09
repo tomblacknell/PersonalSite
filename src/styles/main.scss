@@ -93,18 +93,19 @@ article {
 .line {
     border: 2px solid white;
     margin-top: 25px;
-    width: 50%;
+    // width: 50%;
 }
 
 .nav {
     width: 50%;
+    margin-left: 20px;
 }
 
 .nav-item {
     padding-top: 10px;
     font-size: 1.17em;
     font-weight: 300;
-    min-width: 140px;
+    min-width: 120px;
     list-style: none;
     background-color: $black0;
     padding: 5px; 
@@ -253,8 +254,9 @@ ul {
         display: none;
     }
     .nav {
-        margin-left: 0;
         margin-top: 30px;
+        margin-right: 20px;
+        width: 100%;
     }
     .cookies > div {
         margin: 0;
