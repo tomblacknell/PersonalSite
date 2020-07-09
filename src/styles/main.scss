@@ -176,7 +176,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(1,1,1,0.7);
+    background-color: rgba(1,1,1,0.85);
     padding: 30px;
     min-height: 250px;
     max-width: 750px;
@@ -290,6 +290,44 @@ ul {
     background-color: black;
     height: 50px;
     padding: 25px;
+}
+
+.canvas-hero {
+    // background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.99;
+    height: 100vh;
+    color: #fff;
+    display: block;
+}
+
+.canvas-hero::before {
+    z-index: -100;
+    opacity: 1;
+}
+
+.canvas-hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
 }
 
 @include media(">=tablet", "<desktop") {
