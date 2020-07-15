@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,51 +15,87 @@ const Hero = ({ children }) => {
   const background = useRef(null);
   const canvas = useRef(null);
 
-  function fixDpi(dpi) {
+  const fixDpi = (dpi) => {
     const styleHeight = window.getComputedStyle(canvas.current).getPropertyValue('height').slice(0, -2);
     const styleWidth = window.getComputedStyle(canvas.current).getPropertyValue('width').slice(0, -2);
     canvas.current.setAttribute('height', styleHeight * dpi);
     canvas.current.setAttribute('width', styleWidth * dpi);
-  }
+  };
 
-  function draw() {
+  const generateStars = (canvasWidth, canvasHeight) => {
+    const stars = [];
+    for (let n = 0; n < 100; n += 1) {
+      const [
+        innerCol,
+        outerCol,
+        glowCol,
+      ] = colors[Math.floor(Math.random() * colors.length, 10)];
+      stars.push({
+        x: parseInt(Math.random() * canvasWidth, 10),
+        y: parseInt(Math.random() * canvasHeight, 10),
+        radius: Math.random() * 5,
+        innerCol,
+        outerCol,
+        glowCol,
+      });
+    }
+    return stars;
+  };
+
+  const [stars, setStars] = useState(null);
+
+  let i = 0;
+
+  const animate = () => {
+    console.log('rendered', i);
     const ctx = canvas.current.getContext('2d');
-    const dpi = window.devicePixelRatio;
-    fixDpi(dpi);
+    ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
     ctx.beginPath();
     ctx.fillStyle = 'black';
     ctx.rect(0, 0, background.current.width, background.current.height);
     ctx.fill();
-    for (let n = 0; n < 100; n += 1) {
-      const [innerCol, outerCol, glowCol] = colors[Math.floor(Math.random() * colors.length, 10)];
-      const x = parseInt(Math.random() * canvas.current.width, 10);
-      const y = parseInt(Math.random() * canvas.current.height, 10);
-      const radius = Math.random() * 5;
+    stars.forEach((star) => {
       // glow
       ctx.beginPath();
-      ctx.arc(x, y, radius * 4, 0, Math.PI * 2, false);
-      ctx.fillStyle = glowCol;
+      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius * 4, 0, Math.PI * 2, false);
+      ctx.fillStyle = star.glowCol;
       ctx.fill();
       ctx.closePath();
       // outer
       ctx.beginPath();
-      ctx.arc(x, y, radius * 2, 0, Math.PI * 2, false);
-      ctx.fillStyle = outerCol;
+      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius * 2, 0, Math.PI * 2, false);
+      ctx.fillStyle = star.outerCol;
       ctx.fill();
       ctx.closePath();
       // inner
       ctx.beginPath();
-      ctx.arc(x, y, radius, 0, Math.PI * 2, false);
-      ctx.fillStyle = innerCol;
+      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius, 0, Math.PI * 2, false);
+      ctx.fillStyle = star.innerCol;
       ctx.fill();
       ctx.closePath();
+    });
+
+    const requestId = requestAnimationFrame(animate);
+    console.log(requestId);
+
+    // update positions for next iteration
+    if (requestId % 1 === 0) {
+      i += 1;
     }
-    // requestAnimationFrame(draw);
-  }
+  };
 
   useEffect(() => {
-    requestAnimationFrame(draw);
+    const dpi = window.devicePixelRatio;
+    fixDpi(dpi);
+    const generated = generateStars(canvas.current.width, canvas.current.height);
+    setStars(generated);
   }, []);
+
+  useEffect(() => {
+    if (stars) {
+      requestAnimationFrame(animate);
+    }
+  }, [stars]);
 
   return (
     <div className="canvas-hero">
