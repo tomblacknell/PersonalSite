@@ -29,7 +29,7 @@ const Nav = () => {
         <a onClick={() => scrollTo('projects')}>
           <li className="nav-item">
             <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            Projects
+            PROJECTS
           </li>
         </a>
         {/* <a onClick={() => scrollTo('posts')}>
@@ -38,13 +38,13 @@ const Nav = () => {
         <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github}`}>
           <li className="nav-item">
             <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            GitHub
+            GITHUB
           </li>
         </a>
         <a target="_blank" rel="noreferrer" href={`https://www.linkedin.com/in/${social.linkedin}`}>
           <li className="nav-item">
             <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            LinkedIn
+            LINKEDIN
           </li>
         </a>
       </ul>

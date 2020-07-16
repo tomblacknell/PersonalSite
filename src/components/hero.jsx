@@ -43,56 +43,54 @@ const Hero = ({ children }) => {
   };
 
   const [stars, setStars] = useState(null);
-
-  let i = 0;
+  const [started, setStarted] = useState(false);
 
   const animate = () => {
-    console.log('rendered', i);
     const ctx = canvas.current.getContext('2d');
     ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
     ctx.beginPath();
     ctx.fillStyle = 'black';
     ctx.rect(0, 0, background.current.width, background.current.height);
     ctx.fill();
-    stars.forEach((star) => {
+    stars.forEach((star, pos) => {
       // glow
       ctx.beginPath();
-      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius * 4, 0, Math.PI * 2, false);
+      ctx.arc(star.x, star.y, star.radius * 4, 0, Math.PI * 2, false);
       ctx.fillStyle = star.glowCol;
       ctx.fill();
       ctx.closePath();
       // outer
       ctx.beginPath();
-      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius * 2, 0, Math.PI * 2, false);
+      ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2, false);
       ctx.fillStyle = star.outerCol;
       ctx.fill();
       ctx.closePath();
       // inner
       ctx.beginPath();
-      ctx.arc(star.x + ((i * star.radius) / 15), star.y, star.radius, 0, Math.PI * 2, false);
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
       ctx.fillStyle = star.innerCol;
       ctx.fill();
       ctx.closePath();
+
+      // update positions
+      if (star.x > (canvas.current.width + (star.radius * 2))) {
+        stars[pos].x = -star.radius;
+      } else {
+        stars[pos].x = star.x + (star.radius / 15);
+      }
     });
 
-    const requestId = requestAnimationFrame(animate);
-    console.log(requestId);
-
-    // update positions for next iteration
-    if (requestId % 1 === 0) {
-      i += 1;
-    }
+    requestAnimationFrame(animate);
   };
 
   useEffect(() => {
-    const dpi = window.devicePixelRatio;
-    fixDpi(dpi);
-    const generated = generateStars(canvas.current.width, canvas.current.height);
-    setStars(generated);
+    fixDpi(window.devicePixelRatio);
+    setStars(generateStars(canvas.current.width, canvas.current.height));
   }, []);
 
   useEffect(() => {
-    if (stars) {
+    if (stars && !started) {
+      setStarted(true);
       requestAnimationFrame(animate);
     }
   }, [stars]);
