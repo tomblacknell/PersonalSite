@@ -45,54 +45,58 @@ const Hero = ({ children }) => {
   const [stars, setStars] = useState(null);
   const [started, setStarted] = useState(false);
 
-  const animate = () => {
-    const ctx = canvas.current.getContext('2d');
-    ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
-    ctx.beginPath();
-    ctx.fillStyle = 'black';
-    ctx.rect(0, 0, background.current.width, background.current.height);
-    ctx.fill();
-    stars.forEach((star, pos) => {
-      // glow
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.radius * 4, 0, Math.PI * 2, false);
-      ctx.fillStyle = star.glowCol;
-      ctx.fill();
-      ctx.closePath();
-      // outer
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2, false);
-      ctx.fillStyle = star.outerCol;
-      ctx.fill();
-      ctx.closePath();
-      // inner
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
-      ctx.fillStyle = star.innerCol;
-      ctx.fill();
-      ctx.closePath();
-
-      // update positions
-      if (star.x > (canvas.current.width + (star.radius * 2))) {
-        stars[pos].x = -star.radius;
-      } else {
-        stars[pos].x = star.x + (star.radius / 15);
-      }
-    });
-
-    requestAnimationFrame(animate);
-  };
-
   useEffect(() => {
     fixDpi(window.devicePixelRatio);
     setStars(generateStars(canvas.current.width, canvas.current.height));
   }, []);
 
   useEffect(() => {
+    let frame;
+    const animate = () => {
+      const ctx = canvas.current.getContext('2d');
+      ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
+      ctx.beginPath();
+      ctx.fillStyle = 'black';
+      ctx.rect(0, 0, background.current.width, background.current.height);
+      ctx.fill();
+      stars.forEach((star, pos) => {
+        // glow
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius * 4, 0, Math.PI * 2, false);
+        ctx.fillStyle = star.glowCol;
+        ctx.fill();
+        ctx.closePath();
+        // outer
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2, false);
+        ctx.fillStyle = star.outerCol;
+        ctx.fill();
+        ctx.closePath();
+        // inner
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = star.innerCol;
+        ctx.fill();
+        ctx.closePath();
+
+        // update positions
+        if (star.x > (canvas.current.width + (star.radius * 2))) {
+          stars[pos].x = -star.radius;
+        } else {
+          stars[pos].x = star.x + (star.radius / 15);
+        }
+      });
+      frame = requestAnimationFrame(animate);
+    };
+
     if (stars && !started) {
       setStarted(true);
-      requestAnimationFrame(animate);
+      animate();
     }
+
+    return () => {
+      cancelAnimationFrame(frame);
+    };
   }, [stars]);
 
   return (
