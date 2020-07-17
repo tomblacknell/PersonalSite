@@ -71,8 +71,8 @@ article {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .cookies {
@@ -119,6 +119,22 @@ article {
     cursor: pointer;
 }
 
+.section-head {
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-color: $black1;
+    color: white;
+    > h3 {
+        margin-left: 10px;
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
 .section-subhead {
     margin-top: 20px;
 }
@@ -145,6 +161,10 @@ article {
 a {
     color: #26c2ff;
     text-decoration: none;
+}
+
+.thumbnail-container {
+    width: 100%;
 }
 
 .thumbnail {
@@ -256,7 +276,6 @@ ul {
 }
 
 .canvas-hero {
-    // background-color: black;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

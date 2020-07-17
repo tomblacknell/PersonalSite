@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
@@ -29,21 +29,19 @@ const Projects = () => {
   );
 
   return (
-    <div style={{ marginTop: '40px' }}>
+    <Fragment>
       <div
-        className="row"
+        className="row section-head"
         style={{
           alignItems: 'center', marginBottom: 10, display: 'flex', justifyContent: 'space-between',
         }}
       >
-        <h3 id="projects" style={{ fontWeight: 300, fontSize: '1.5rem' }}>
-          Projects
+        <h3 id="projects">
+          PROJECTS
         </h3>
         <FontAwesomeIcon className="icon-nav" icon={faProjectDiagram} />
       </div>
-      <div className="hr" />
-      <p className="section-subhead">Read about and play with some of my side projects</p>
-      <div className="row wrap justify-around">
+      <div className="row wrap justify-around thumbnail-container">
         {projects.map(({ node }) => (
           <Thumbnail
             slug={node.fields.slug}
@@ -53,7 +51,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </div>
+    </Fragment>
   );
 };
 
