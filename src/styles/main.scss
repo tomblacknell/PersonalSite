@@ -95,7 +95,7 @@ article {
 }
 
 .line {
-    border: 3px solid white;
+    border: 3px solid $white;
     margin-top: 25px;
 }
 
@@ -105,6 +105,7 @@ article {
 }
 
 .nav-item {
+    letter-spacing: 1px;
     padding-top: 10px;
     font-size: 1.17em;
     font-weight: 500;
@@ -132,6 +133,7 @@ article {
         font-size: 1.5rem;
         margin-top: 5px;
         margin-bottom: 5px;
+        letter-spacing: 1px;
     }
 }
 
@@ -251,6 +253,7 @@ ul {
 .heading {
     text-shadow: 1px 1px $black1;
     font-size: 2.75rem;
+    letter-spacing: 2px;
 }
 
 .aboutTheAuthor {
