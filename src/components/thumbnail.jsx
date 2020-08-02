@@ -7,21 +7,18 @@ const Thumbnail = ({
   description,
   date,
 }) => (
-  <div className="thumbnail" key={slug}>
-    <Link style={{ height: '100%' }} to={slug}>
-      <div>
-        <h3>
-          {title}
-        </h3>
-        <small>{date}</small>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
-      </div>
-    </Link>
-  </div>
+  <Link className="thumbnail" style={{ height: '100%' }} to={slug}>
+    <div className="thumbnail-image" />
+    <h2>
+      {title}
+    </h2>
+    <small>{date}</small>
+    <p
+      dangerouslySetInnerHTML={{
+        __html: description,
+      }}
+    />
+  </Link>
 );
 
 export default Thumbnail;
