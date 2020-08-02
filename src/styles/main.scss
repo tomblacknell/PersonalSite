@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    // border-bottom: 3px solid darkgrey;
     background-color: $black1;
     padding-left: 10%;
     padding-right: 10%;
@@ -36,6 +37,7 @@ footer {
     padding-right: 10%;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-top: 3px solid darkgrey;
     color: $white;
 }
 
@@ -126,6 +128,7 @@ article {
     font-weight: 300;
     font-size: 1.5rem;
     background-color: $black1;
+    border-bottom: 3px solid darkgrey;
     color: white;
     > h3 {
         margin-left: 10px;
@@ -192,6 +195,7 @@ a {
         height: 180px;
         border: 4px solid #1f1f1f;
         margin-bottom: 15px;
+        background-color: #f1f1f1;
     }
 }
 
