@@ -1,45 +1,26 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-undef */
-import React, { useState } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
-import useDocumentScroll from '../utils/useDocumentScroll';
 
-const Header = ({ title, fixHeader }) => {
-  const [shouldShow, setShouldShow] = useState(false);
-
-  const minScroll = 80;
-  const timeoutDelay = 400;
-
-  useDocumentScroll(({ previousScrollTop, currentScrollTop }) => {
-    const hasScrolledDown = previousScrollTop < currentScrollTop;
-    const hasScrolledMin = currentScrollTop > minScroll;
-
-    setTimeout(() => {
-      setShouldShow(hasScrolledDown && hasScrolledMin);
-    }, timeoutDelay);
-  });
-
-  return (
-    <header className={`${(shouldShow || fixHeader) && 'show'}`}>
-      <h1
+const Header = ({ title, fixHeader }) => (fixHeader ? (
+  <header className="show">
+    <h1
+      style={{
+        marginTop: 0,
+        fontSize: '1.5rem',
+      }}
+    >
+      <Link
         style={{
-          marginTop: 0,
-          fontSize: '1.5rem',
+          boxShadow: 'none',
+          textDecoration: 'none',
+          color: 'inherit',
         }}
+        to="/"
       >
-        <Link
-          style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          to="/"
-        >
-          {title}
-        </Link>
-      </h1>
-    </header>
-  );
-};
+        {title}
+      </Link>
+    </h1>
+  </header>
+) : <Fragment />);
 
 export default Header;

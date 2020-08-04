@@ -16,16 +16,18 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <h3 style={{ fontWeight: 300 }}>Project</h3>
       <article>
         <div>
-          <h2
-            style={{
-              marginBottom: 5,
-            }}
-          >
-            {post.frontmatter.title}
-          </h2>
+          <div className="project-info">
+            <h2
+              style={{
+                marginBottom: 5,
+              }}
+            >
+              {post.frontmatter.title}
+            </h2>
+            <div className="cta" />
+          </div>
           <p
             style={{
               display: 'block',

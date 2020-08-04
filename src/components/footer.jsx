@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer>
-    © Tom Blacknell,
-    {' '}
-    {new Date().getFullYear()}
-  </footer>
+  <footer />
 );
 
 export default Footer;

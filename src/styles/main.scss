@@ -13,21 +13,13 @@ body {
 }
 
 header {
-    // border-bottom: 3px solid darkgrey;
-    background-color: $black1;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: fixed;
-    width: 100%;
-    top: -50px;
-    transition: top 0.3s;
+    background-color: #1f1f1f;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    margin: 0;
     >h1 {
         font-weight: 300;
-    }
-    &.show{
-        top: 0;
     }
 }
 
@@ -39,10 +31,6 @@ footer {
     padding-bottom: 10px;
     border-top: 3px solid darkgrey;
     color: $white;
-}
-
-main {
-    padding: 10px;
 }
 
 .hr {
@@ -72,7 +60,6 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -358,6 +345,16 @@ ul {
     .container {
         margin-left: 5%;
         margin-right: 5%;
+    }
+}
+
+.project-info {
+    height: 100px;
+    border: solid black 2px;
+    margin-bottom: 40px;
+    padding: 15px;
+    > .cta {
+        
     }
 }
 
