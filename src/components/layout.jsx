@@ -16,6 +16,7 @@ const Layout = ({ title, children, fixHeader }) => (
     style={{
       marginLeft: 'auto',
       marginRight: 'auto',
+      backgroundColor: '#f1f1f1',
     }}
   >
     <Header title={title} fixHeader={fixHeader} />

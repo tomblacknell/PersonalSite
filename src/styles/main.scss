@@ -14,8 +14,12 @@ body {
 
 header {
     background-color: #1f1f1f;
+    box-shadow: 0px 2px 6px -3px #adadad;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 25%;
     padding-right: 25%;
+    border-bottom: 3px solid darkgrey;
     display: flex;
     margin: 0;
     >h1 {
@@ -51,7 +55,7 @@ h3 {
 }
 
 article {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .container {
@@ -115,6 +119,7 @@ article {
     font-weight: 300;
     font-size: 1.5rem;
     background-color: $black1;
+    box-shadow: 0px 2px 6px -3px #adadad;
     border-bottom: 3px solid darkgrey;
     color: white;
     > h3 {
@@ -157,6 +162,7 @@ a {
 
 .thumbnail-container {
     width: 100%;
+    padding-bottom: 60px;
 }
 
 .thumbnail {
@@ -350,11 +356,18 @@ ul {
 
 .project-info {
     height: 100px;
-    border: solid black 2px;
+    border: solid #941818 2px;
     margin-bottom: 40px;
+    box-shadow: 0px 2px 6px -3px #adadad;
     padding: 15px;
+    background-color: #b53333;
+    > h2 {
+        margin-bottom: 5px;
+        color: white;
+        font-weight: 300;
+    }
     > .cta {
-        
+
     }
 }
 
