@@ -1,6 +1,7 @@
 ---
 title: Personal Site
 description: "How I build this site"
+url: https://www.github.com
 ---
 
 Bacon ipsum dolor amet capicola venison andouille cupim alcatra frankfurter pork belly short ribs bacon jowl jerky prosciutto picanha. Ham hock shank chuck kielbasa flank jerky shankle meatloaf strip steak. T-bone salami andouille biltong strip steak hamburger pastrami chicken tenderloin. Tongue brisket shoulder, fatback short loin shankle bresaola.

@@ -357,17 +357,23 @@ ul {
 .project-info {
     height: 100px;
     border: solid #941818 2px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    position: relative;
     box-shadow: 0px 2px 6px -3px #adadad;
     padding: 15px;
     background-color: #b53333;
+    border-radius: 5px;
     > h2 {
         margin-bottom: 5px;
         color: white;
         font-weight: 300;
     }
     > .cta {
-
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+        padding: 10px;
     }
 }
 

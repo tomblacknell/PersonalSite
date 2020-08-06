@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 import AboutTheAuthor from '../components/aboutTheAuthor';
 import Layout from '../components/layout';
@@ -26,7 +28,9 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
             >
               {post.frontmatter.title}
             </h2>
-            <div className="cta" />
+            <a className="cta" rel="noreferrer noopener" target="_blank" href={post.frontmatter.url}>
+              <FontAwesomeIcon className="icon-btn " icon={faPlayCircle} size="3x" />
+            </a>
           </div>
           <p
             style={{
@@ -38,7 +42,7 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
           </p>
         </div>
         <section
-          style={{ marginBottom: 40 }}
+          style={{ marginBottom: 40, padding: 10 }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <AboutTheAuthor />
@@ -95,6 +99,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        url
       }
     }
   }
