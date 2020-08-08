@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
-import AboutTheAuthor from '../components/aboutTheAuthor';
+// import AboutTheAuthor from '../components/aboutTheAuthor';
+import ProjectInfo from '../components/projectInfo';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -20,18 +19,7 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
       />
       <article>
         <div>
-          <div className="project-info">
-            <h2
-              style={{
-                marginBottom: 5,
-              }}
-            >
-              {post.frontmatter.title}
-            </h2>
-            <a className="cta" rel="noreferrer noopener" target="_blank" href={post.frontmatter.url}>
-              <FontAwesomeIcon className="icon-btn " icon={faPlayCircle} size="3x" />
-            </a>
-          </div>
+          <ProjectInfo post={post} />
           <p
             style={{
               display: 'block',
@@ -45,7 +33,7 @@ const ProjectTemplate = ({ data, pageContext, location }) => {
           style={{ marginBottom: 40, padding: 10 }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <AboutTheAuthor />
+        {/* <AboutTheAuthor /> */}
       </article>
 
       <nav>
