@@ -41,7 +41,7 @@ const Projects = () => {
         </h3>
         <FontAwesomeIcon className="icon-nav" icon={faProjectDiagram} />
       </div>
-      <div className="row wrap justify-around thumbnail-container">
+      <div className="col wrap justify-around thumbnail-container">
         {projects.map(({ node }) => (
           <Thumbnail
             slug={node.fields.slug}

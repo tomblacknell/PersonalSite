@@ -12,13 +12,7 @@ import Footer from './footer';
 import Cookies from './cookies';
 
 const Layout = ({ title, children, fixHeader }) => (
-  <div
-    style={{
-      marginLeft: 'auto',
-      marginRight: 'auto',
-      backgroundColor: '#f1f1f1',
-    }}
-  >
+  <div className="layout">
     <Header title={title} fixHeader={fixHeader} />
     <main className="container">{children}</main>
     <Footer />

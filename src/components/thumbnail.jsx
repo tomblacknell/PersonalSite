@@ -9,15 +9,17 @@ const Thumbnail = ({
 }) => (
   <Link className="thumbnail" style={{ height: '100%' }} to={slug}>
     <div className="thumbnail-image" />
-    <h2>
-      {title}
-    </h2>
-    <small>{date}</small>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: description,
-      }}
-    />
+    <div className="thumbnail-details">
+      <h2>
+        {title}
+      </h2>
+      <small>{date}</small>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
+    </div>
   </Link>
 );
 
