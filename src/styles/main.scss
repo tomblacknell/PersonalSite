@@ -61,7 +61,7 @@ article {
 .layout {
     margin-left: auto;
     margin-right: auto;
-    background: radial-gradient(circle, rgba(241,241,241,1) 0%, rgba(223,223,223,1) 100%);
+    background: radial-gradient(circle, #ffffff 0%, #00000014 100%);
 }
 
 .container {
@@ -70,8 +70,8 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .cookies {
@@ -102,11 +102,12 @@ article {
 
 .nav {
     width: 50%;
+    min-width: 150px;
     margin-left: 20px;
 }
 
 .nav-item {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding-top: 10px;
     font-size: 1.17em;
     font-weight: 500;
@@ -171,14 +172,15 @@ a {
 .thumbnail-container {
     width: 100%;
     padding-bottom: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail {
     display: flex;
     flex-direction: row;
-    // justify-content: flex-end;
-    // width: 250px;
-    
+    justify-content: flex-start;
+    flex-wrap: wrap;
     flex-grow: 1;
     margin-top: 30px;
     p {
@@ -198,7 +200,8 @@ a {
         border: 4px solid #1f1f1f;
         margin-bottom: 15px;
         background-color: #f1f1f1;
-        min-width: 325px;
+        width: 325px;
+        flex-grow: 1;
     }
 }
 
@@ -326,13 +329,12 @@ ul {
 .project-info {
     height: 100px;
     max-width: 300px;
-    border: solid #941818 1px;
     margin-bottom: 30px;
     position: relative;
     box-shadow: 0px 2px 6px -3px #adadad;
     padding: 15px;
-    background-color: #c72e2e;
     border-radius: 5px;
+    background: linear-gradient(115deg, #060bafe0 0%, #c10808e3 100%);
     > h2 {
         margin-bottom: 5px;
         color: white;
@@ -349,8 +351,10 @@ ul {
 
 @include media("screen", "<=phone") {
     .thumbnail {
-        flex-direction: column;
         width: 100%;
+    }
+    .thumbnail-image {
+        
     }
     .icon-hero {
         display: none;
@@ -395,7 +399,6 @@ ul {
         margin-right: 20%;
     }
     .thumbnail {
-        flex-direction: column;
         width: 100%;
     }
 }
@@ -403,7 +406,6 @@ ul {
 
 @include media(">phone", "<tablet") {
     .thumbnail {
-        flex-direction: column;
         width: 100%;
     }
 }
@@ -411,8 +413,9 @@ ul {
 @include media("screen", ">desktop") {
     .thumbnail {
         > .thumbnail-details {
-            margin-top: 10px;
             margin-left: 20px;
+            min-width: 200px;
+            width: 200px;
         }
     }
 }
