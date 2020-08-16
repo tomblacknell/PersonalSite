@@ -69,7 +69,6 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-left: 30%;
     margin-right: 30%;
 }
@@ -171,7 +170,7 @@ a {
 
 .thumbnail-container {
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -334,7 +333,7 @@ ul {
     box-shadow: 0px 2px 6px -3px #adadad;
     padding: 15px;
     border-radius: 5px;
-    background: linear-gradient(115deg, #060bafe0 0%, #c10808e3 100%);
+    background: linear-gradient(115deg, #0919d48f 0%, #e62b0d8c 100%);
     > h2 {
         margin-bottom: 5px;
         color: white;
@@ -349,12 +348,23 @@ ul {
     }
 }
 
+.stats {
+    height: 250px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(115deg, #0919d48f 0%, #e62b0d8c 100%);
+    box-shadow: 0px 2px 9px -3px #000000;
+
+    h3 {
+        color: white;
+        letter-spacing: 2px;
+    }
+}
+
 @include media("screen", "<=phone") {
     .thumbnail {
         width: 100%;
-    }
-    .thumbnail-image {
-        
     }
     .icon-hero {
         display: none;
