@@ -4,7 +4,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import scrollTo from '../utils/scrollTo';
 
 const Nav = () => {
@@ -28,8 +29,8 @@ const Nav = () => {
       <ul>
         <a onClick={() => scrollTo('projects')}>
           <li className="nav-item">
-            <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            PROJECTS
+            <FontAwesomeIcon className="icon-nav" icon={faPlay} />
+            Projects
           </li>
         </a>
         {/* <a onClick={() => scrollTo('posts')}>
@@ -37,14 +38,14 @@ const Nav = () => {
         </a> */}
         <a target="_blank" rel="noreferrer" href={`https://github.com/${social.github}`}>
           <li className="nav-item">
-            <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            GITHUB
+            <FontAwesomeIcon className="icon-nav" icon={faGithubAlt} />
+            GitHub
           </li>
         </a>
         <a target="_blank" rel="noreferrer" href={`https://www.linkedin.com/in/${social.linkedin}`}>
           <li className="nav-item">
-            <FontAwesomeIcon className="icon-nav" icon={faCaretRight} />
-            LINKEDIN
+            <FontAwesomeIcon className="icon-nav" icon={faLinkedin} />
+            LinkedIn
           </li>
         </a>
       </ul>

@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 // import Posts from '../components/posts';
 import Projects from '../components/projects';
 import Hero from '../components/hero';
-import RunStats from '../components/runStats';
+// import RunStats from '../components/runStats';
 
 import '../styles/main.scss';
 
@@ -22,7 +22,7 @@ const Index = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" />
         <Projects />
-        <RunStats />
+        {/* <RunStats /> */}
         {/* <Posts /> */}
       </Layout>
     </Fragment>
