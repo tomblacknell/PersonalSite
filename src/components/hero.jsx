@@ -57,6 +57,8 @@ const Hero = ({ children }) => {
     const animate = () => {
       if (frame < 200) {
         ctx.globalAlpha += 0.005;
+      } else {
+        ctx.globalAlpha = 1;
       }
       ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
       ctx.beginPath();
@@ -95,7 +97,7 @@ const Hero = ({ children }) => {
 
     if (stars && !started) {
       setStarted(true);
-      animate();
+      frame = requestAnimationFrame(animate);
     }
 
     return () => {
