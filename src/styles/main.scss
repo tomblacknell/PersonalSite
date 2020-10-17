@@ -119,6 +119,10 @@ article {
     border-bottom: 2px solid $white;
     color: $white;
     cursor: pointer;
+    &.disabled {
+        border-bottom-color: $black2;
+        color: $black2;
+    }
 }
 
 .section-head {
