@@ -6,9 +6,9 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import scrollTo from '../utils/scrollTo';
 
 const colors = [
-  ['rgba(248, 255, 233, 1)', 'rgba(237, 173, 58, 0.4)', 'rgba(80, 44, 17, 0.4)'], // yellow
-  ['rgba(247, 216, 221, 1)', 'rgba(210, 100, 64, 0.4)', 'rgba(60, 25, 30, 0.4)'], // red
-  ['rgba(180, 192, 224, 1)', 'rgba(115, 102, 165, 0.4)', 'rgba(32, 31, 58, 0.4)'], // purple
+  ['rgba(248, 255, 233, 1)', 'rgba(237, 173, 58, 0.3)', 'rgba(80, 44, 17, 0.1)'], // yellow
+  ['rgba(247, 216, 221, 1)', 'rgba(210, 100, 64, 0.3)', 'rgba(60, 25, 30, 0.1)'], // red
+  ['rgba(180, 192, 224, 1)', 'rgba(115, 102, 165, 0.3)', 'rgba(32, 31, 58, 0.1)'], // purple
 ];
 
 const Hero = ({ children }) => {
@@ -33,7 +33,7 @@ const Hero = ({ children }) => {
       stars.push({
         x: parseInt(Math.random() * canvasWidth, 10),
         y: parseInt(Math.random() * canvasHeight, 10),
-        radius: Math.random() * 5,
+        radius: Math.random() * 4,
         innerCol,
         outerCol,
         glowCol,
@@ -62,7 +62,7 @@ const Hero = ({ children }) => {
       }
       ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
       ctx.beginPath();
-      ctx.fillStyle = 'black';
+      ctx.fillStyle = '#1b1b5c';
       ctx.rect(0, 0, background.current.width, background.current.height);
       ctx.fill();
       stars.forEach((star, pos) => {
@@ -108,7 +108,7 @@ const Hero = ({ children }) => {
   return (
     <div className="canvas-hero">
       <canvas
-        style={{ backgroundColor: 'black' }}
+        style={{ backgroundImage: 'linear-gradient(rgb(27, 27, 92) , rgb(57 57 194))' }}
         id="background-canvas"
         ref={background}
         className="canvas"
