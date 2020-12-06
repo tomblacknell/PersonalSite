@@ -62,7 +62,7 @@ const Hero = ({ children }) => {
       }
       ctx.clearRect(0, 0, canvas.current.width, canvas.current.height);
       ctx.beginPath();
-      ctx.fillStyle = '#1b1b5c';
+      ctx.fillStyle = 'transparent';
       ctx.rect(0, 0, background.current.width, background.current.height);
       ctx.fill();
       stars.forEach((star, pos) => {
@@ -118,7 +118,7 @@ const Hero = ({ children }) => {
         ref={canvas}
         className="canvas"
       />
-      <div style={{ height: '100%', borderBottom: '3px solid darkgrey' }}>
+      <div style={{ height: '100%' }}>
         {children}
       </div>
       <div className="row justify-center">
@@ -142,7 +142,7 @@ const Hero = ({ children }) => {
             target="_blank"
             rel="noreferrer"
             style={{
-              color: 'rgb(135, 135, 135)',
+              color: 'white',
               textDecoration: 'underline',
               cursor: 'pointer',
             }}

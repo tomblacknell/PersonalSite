@@ -8,14 +8,14 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; /* eslint-disable import/first */
 
 import Header from './header';
-import Footer from './footer';
+// import Footer from './footer';
 import Cookies from './cookies';
 
 const Layout = ({ title, children, fixHeader }) => (
   <div className="layout">
     <Header title={title} fixHeader={fixHeader} />
     <main className="container">{children}</main>
-    <Footer />
+    {/* <Footer /> */}
     <Cookies />
   </div>
 );
