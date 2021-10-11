@@ -6,9 +6,10 @@ const Thumbnail = ({
   title,
   description,
   date,
+  image,
 }) => (
-  <Link className="thumbnail" style={{ height: '100%' }} to={slug}>
-    <div className="thumbnail-image" />
+  <Link className="thumbnail" to={slug}>
+    <img className="thumbmail-image" width="350" height="200" src={image} alt={title} />
     <div className="thumbnail-details">
       <h2>
         {title}

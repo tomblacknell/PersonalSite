@@ -40,9 +40,9 @@ const Nav = () => {
           </li>
         </a>
         <a onClick={() => scrollTo('projects')}>
-          <li className="nav-item disabled">
+          <li className="nav-item">
             <FontAwesomeIcon className="icon-nav" icon={faPlay} />
-            Projects (WIP)
+            Projects
           </li>
         </a>
       </ul>

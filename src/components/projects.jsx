@@ -20,6 +20,9 @@ const Projects = () => {
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
+                image {
+                  publicURL
+                }
               }
             }
           }
@@ -48,6 +51,7 @@ const Projects = () => {
             title={node.frontmatter.title || node.fields.slug}
             description={node.frontmatter.description || node.excerpt}
             date={node.frontmatter.date}
+            image={node.frontmatter.image && node.frontmatter.image.publicURL}
           />
         ))}
       </div>

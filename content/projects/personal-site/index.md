@@ -1,6 +1,7 @@
 ---
 title: Personal Site
 description: "How I build this site"
+image: "./project-personal-site-thumbnail.png"
 ---
 
 **Heading**
