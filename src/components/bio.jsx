@@ -9,13 +9,11 @@ const Bio = () => (
         <div className="line" style={{ width: '50%' }} />
         <div>
           <p>
-            Web Engineer at
-            <a rel="noreferrer" target="_blank" href="https://www.americanexpress.com/en-gb/referral"> American Express.</a>
-          </p>
-          <p>
-            <span className="large-emoji" aria-label="man using laptop" role="img"> 👨‍💻</span>
-            <span className="large-emoji" aria-label="man running" role="img"> 🏃‍♂️ </span>
-            <span className="large-emoji" aria-label="piano" role="img"> 🎹</span>
+            web engineer at
+            <a rel="noreferrer" target="_blank" href="https://www.twitter.com/tom_blacknell"> Twitter</a>
+            , previously
+            <a rel="noreferrer" target="_blank" href="https://www.twitter.com"> American Express</a>
+            .
           </p>
         </div>
       </div>

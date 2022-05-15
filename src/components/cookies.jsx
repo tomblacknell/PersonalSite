@@ -14,7 +14,7 @@ const CookieBanner = () => {
   return (show ? (
     <div className="cookies row justify-center">
       <div className="row justify-between">
-        <p style={{ color: 'white' }}>This site uses cookies to enhance your experience.</p>
+        <p style={{ color: 'white' }}>This site uses cookies</p>
         <FontAwesomeIcon className="icon-btn" icon={faTimesCircle} onClick={onClick} />
       </div>
     </div>

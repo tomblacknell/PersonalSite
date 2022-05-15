@@ -118,7 +118,7 @@ const Hero = ({ children }) => {
         ref={canvas}
         className="canvas"
       />
-      <div style={{ height: '100%' }}>
+      <div style={{ height: '100%', boxShadow: 'inset 0px 0px 5px 0px #000000' }}>
         {children}
       </div>
       <div className="row justify-center">
